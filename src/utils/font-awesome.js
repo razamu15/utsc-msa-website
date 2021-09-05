@@ -1,0 +1,7 @@
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee, faFileAlt, faUniversity, faSmile, faSitemap, faKaaba, faPray, faMosque, faUtensils, 
+faUsers, faBullhorn, faCalendarAlt, faLink, faHandsHelping, faPhoneSquare } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, faCheckSquare, faCoffee, faFileAlt, faUniversity, faSmile, faSitemap, faKaaba, faPray, faMosque, faUtensils, 
+    faUsers, faBullhorn, faCalendarAlt, faLink, faHandsHelping, faPhoneSquare)

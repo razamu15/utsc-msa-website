@@ -11,5 +11,6 @@ module.exports = {
         spaceId: "loneps9tkusn",
       },
     },
+    "gatsby-plugin-fontawesome-css"
   ],
 };

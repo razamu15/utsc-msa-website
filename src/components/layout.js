@@ -1,5 +1,7 @@
 import * as React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../styles/global.css";
+import "../utils/font-awesome"
 
 const Layout = (props) => {
   let burger = React.useRef(null);
@@ -31,7 +33,7 @@ const Layout = (props) => {
                   <span className="navbar-item has-dropdown is-hoverable">
                     <a className="button navbar-link is-arrowless">
                       <span className="icon">
-                        <i className="fa fa-sitemap" ></i>
+                        <FontAwesomeIcon icon="sitemap" />
                       </span>
                       <span>About Us</span>
                     </a>
@@ -40,7 +42,7 @@ const Layout = (props) => {
                       <span className="navbar-item">
                         <a className="button" href="#">
                           <span className="icon">
-                            <i className="fa fa-file-alt"></i>
+                            <FontAwesomeIcon icon="file-alt" />
                           </span>
                           <span>Mission & Values</span>
                         </a>
@@ -48,7 +50,7 @@ const Layout = (props) => {
                       <span className="navbar-item">
                         <a className="button" href="#">
                           <span className="icon">
-                            <i className="fa fa-university"></i>
+                            <FontAwesomeIcon icon="university" />
                           </span>
                           <span>Constitution</span>
                         </a>
@@ -56,7 +58,7 @@ const Layout = (props) => {
                       <span className="navbar-item">
                         <a className="button" href="#">
                           <span className="icon">
-                            <i className="fa fa-smile"></i>
+                            <FontAwesomeIcon icon="smile" />
                           </span>
                           <span>Meet the Team</span>
                         </a>
@@ -66,7 +68,7 @@ const Layout = (props) => {
                   <span className="navbar-item has-dropdown is-hoverable">
                     <a className="button navbar-link is-arrowless">
                       <span className="icon">
-                        <i className="fa fa-kaaba"></i>
+                        <FontAwesomeIcon icon="kaaba" />
                       </span>
                       <span>Islamic Resources</span>
                     </a>
@@ -75,7 +77,7 @@ const Layout = (props) => {
                       <span className="navbar-item">
                         <a className="button" href="#">
                           <span className="icon">
-                            <i className="fa fa-pray"></i>
+                            <FontAwesomeIcon icon="pray" />
                           </span>
                           <span>Jummuah</span>
                         </a>
@@ -83,7 +85,7 @@ const Layout = (props) => {
                       <span className="navbar-item">
                         <a className="button" href="#">
                           <span className="icon">
-                            <i className="fa fa-mosque"></i>
+                            <FontAwesomeIcon icon="mosque" />
                           </span>
                           <span>Praying Areas</span>
                         </a>
@@ -91,7 +93,7 @@ const Layout = (props) => {
                       <span className="navbar-item">
                         <a className="button" href="#">
                           <span className="icon">
-                            <i className="fa fa-utensils"></i>
+                            <FontAwesomeIcon icon="utensils" />
                           </span>
                           <span>Halal Food</span>
                         </a>
@@ -101,7 +103,7 @@ const Layout = (props) => {
                   <span className="navbar-item has-dropdown is-hoverable">
                     <a className="button navbar-link is-arrowless">
                       <span className="icon">
-                        <i className="fa fa-users"></i>
+                        <FontAwesomeIcon icon="users" />
                       </span>
                       <span>Programs & Events</span>
                     </a>
@@ -110,7 +112,7 @@ const Layout = (props) => {
                       <span className="navbar-item">
                         <a className="button" href="#">
                           <span className="icon">
-                            <i className="fa fa-bullhorn"></i>
+                            <FontAwesomeIcon icon="bullhorn" />
                           </span>
                           <span>Announcements</span>
                         </a>
@@ -118,7 +120,7 @@ const Layout = (props) => {
                       <span className="navbar-item">
                         <a className="button" href="#">
                           <span className="icon">
-                            <i className="fas fa-calendar-alt"></i>
+                            <FontAwesomeIcon icon="calendar-alt" />
                           </span>
                           <span>Events</span>
                         </a>
@@ -126,7 +128,7 @@ const Layout = (props) => {
                       <span className="navbar-item">
                         <a className="button" href="#">
                           <span className="icon">
-                            <i className="fa fa-users"></i>
+                            <FontAwesomeIcon icon="users" />
                           </span>
                           <span>Programs</span>
                         </a>
@@ -136,16 +138,16 @@ const Layout = (props) => {
                   <span className="navbar-item has-dropdown is-hoverable">
                     <a className="button navbar-link is-arrowless">
                       <span className="icon">
-                        <i className="fa fa-link"></i>
+                        <FontAwesomeIcon icon="link" />
                       </span>
                       <span>Connect</span>
                     </a>
 
                     <div className="navbar-dropdown ">
                       <span className="navbar-item">
-                        <a className="button" href="#" style={{padding: "25px 15px"}}>
+                        <a className="button" href="#" style={{ padding: "25px 15px" }}>
                           <span className="icon">
-                            <i className="fa fa-hands-helping"></i>
+                            <FontAwesomeIcon icon="hands-helping" />
                           </span>
                           <span>Get <br /> Involved</span>
                         </a>
@@ -153,7 +155,7 @@ const Layout = (props) => {
                       <span className="navbar-item">
                         <a className="button" href="#">
                           <span className="icon">
-                            <i className="fa fa-phone-square"></i>
+                            <FontAwesomeIcon icon="phone-square" />
                           </span>
                           <span>Contact</span>
                         </a>
@@ -176,12 +178,15 @@ const Layout = (props) => {
                 {props.subHeading}
               </h2>
               <div className="social-media">
-                <a href="https://facebook.com" target="_blank" className="button is-light is-large"><i
-                  className="fab fa-facebook-square" aria-hidden="true"></i></a>
-                <a href="https://instagram.com" target="_blank" className="button is-light is-large"><i
-                  className="fab fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://twitter.com" target="_blank" className="button is-light is-large"><i
-                  className="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://facebook.com" target="_blank" className="button is-light is-large">
+                  <FontAwesomeIcon icon={['fab', 'facebook']} />
+                </a>
+                <a href="https://instagram.com" target="_blank" className="button is-light is-large">
+                  <FontAwesomeIcon icon={['fab', 'instagram']} />
+                </a>
+                <a href="https://twitter.com" target="_blank" className="button is-light is-large">
+                  <FontAwesomeIcon icon={['fab', 'twitter']} />
+                </a>
               </div>
             </div>
           </div>

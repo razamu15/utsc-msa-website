@@ -1,4 +1,6 @@
 import * as React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import "../../utils/font-awesome"
 
 const Resources = (props) => {
   return (
@@ -23,7 +25,7 @@ const Resources = (props) => {
             <div className="tile is-child box shadow-hoverable format-box">
               <div className="resource-tile">
                 <span className="icon has-text-link is-large">
-                  <i className="fas fa-2x fa-pray"></i>
+                  <FontAwesomeIcon icon="pray" size="2x" />
                 </span>
                 <h1 className=" title is-4">Jummuah</h1>
               </div>
@@ -32,7 +34,7 @@ const Resources = (props) => {
             <div className="tile is-child box shadow-hoverable format-box">
               <div className="resource-tile">
                 <span className="icon has-text-link is-large">
-                  <i className="fas fa-2x fa-mosque"></i>
+                  <FontAwesomeIcon icon="mosque" size="2x" />
                 </span>
                 <h1 className=" title is-4">Praying Areas</h1>
               </div>
@@ -41,7 +43,7 @@ const Resources = (props) => {
             <div className="tile is-child box shadow-hoverable format-box">
               <div className="resource-tile">
                 <span className="icon has-text-link is-large">
-                  <i className="fas fa-2x fa-utensils"></i>
+                  <FontAwesomeIcon icon="utensils" size="2x" />
                 </span>
                 <h1 className=" title is-4">Halal Food</h1>
               </div>
