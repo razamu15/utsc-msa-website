@@ -1,6 +1,5 @@
 import * as React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import "../../utils/font-awesome"
 
 const Resources = (props) => {
   return (
