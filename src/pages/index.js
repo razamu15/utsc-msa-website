@@ -11,7 +11,7 @@ import Sponsors from "../components/home/sponsors"
 // markup
 const IndexPage = () => {
   return (
-    <Layout heading="MSA" subHeading="some random text">
+    <Layout heading="MSA" subHeading="some random text" socials={true} size="fullheight">
       <Announcements />
       <About />
       <Events />

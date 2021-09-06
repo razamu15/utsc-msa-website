@@ -1,4 +1,6 @@
 import * as React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import "../../utils/font-awesome"
 
 const Events = (props) => {
   return (
@@ -16,7 +18,7 @@ const Events = (props) => {
               <button className="button is-link card-btn is-rounded  is-outlined" style={{margin: "0px 15px"}}>
                 <span>All Events</span>
                 <span className="icon is-small">
-                  <i className="fas fa-arrow-right"></i>
+                  <FontAwesomeIcon icon="arrow-right" />
                 </span>
               </button>
             </div>

@@ -14,7 +14,7 @@ const Layout = (props) => {
 
   return (
     <main>
-      <section className="hero is-fullheight" id="landing-hero">
+      <section className={`hero is-${props.size}`} id="landing-hero">
         <div className="hero-head">
           <nav className="navbar">
             <div className="container">
@@ -177,17 +177,20 @@ const Layout = (props) => {
               <h2 className="subtitle">
                 {props.subHeading}
               </h2>
-              <div className="social-media">
-                <a href="https://facebook.com" target="_blank" className="button is-light is-large">
-                  <FontAwesomeIcon icon={['fab', 'facebook']} />
-                </a>
-                <a href="https://instagram.com" target="_blank" className="button is-light is-large">
-                  <FontAwesomeIcon icon={['fab', 'instagram']} />
-                </a>
-                <a href="https://twitter.com" target="_blank" className="button is-light is-large">
-                  <FontAwesomeIcon icon={['fab', 'twitter']} />
-                </a>
-              </div>
+              {props.socials ?
+                <div className="social-media">
+                  <a href="https://facebook.com" target="_blank" className="button is-light is-large">
+                    <FontAwesomeIcon icon={['fab', 'facebook']} />
+                  </a>
+                  <a href="https://instagram.com" target="_blank" className="button is-light is-large">
+                    <FontAwesomeIcon icon={['fab', 'instagram']} />
+                  </a>
+                  <a href="https://twitter.com" target="_blank" className="button is-light is-large">
+                    <FontAwesomeIcon icon={['fab', 'twitter']} />
+                  </a>
+                </div>
+                : false
+              }
             </div>
           </div>
         </div>
