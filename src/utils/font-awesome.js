@@ -1,7 +1,8 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faCheckSquare, faCoffee, faFileAlt, faUniversity, faSmile, faSitemap, faKaaba, faPray, faMosque, faUtensils, 
-faUsers, faBullhorn, faCalendarAlt, faLink, faHandsHelping, faPhoneSquare, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+faUsers, faBullhorn, faCalendarAlt, faLink, faHandsHelping, faPhoneSquare, faArrowRight, faEnvelope, faUser, 
+faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 library.add(fab, faCheckSquare, faCoffee, faFileAlt, faUniversity, faSmile, faSitemap, faKaaba, faPray, faMosque, faUtensils, 
-    faUsers, faBullhorn, faCalendarAlt, faLink, faHandsHelping, faPhoneSquare, faArrowRight)
+    faUsers, faBullhorn, faCalendarAlt, faLink, faHandsHelping, faPhoneSquare, faArrowRight, faEnvelope, faUser, faPaperPlane)
