@@ -4,15 +4,14 @@ const About = (props) => {
   return (
     <section className="hero is-fullheight slanted" id="about">
       <div className="hero-heading">
-        <h1 className="title is-3 hero-heading-border" style={{ color: "white" }}>About MSA</h1>
+        <h1 className="title is-3 hero-heading-border" style={{ color: "white" }}>{props.data.heading}</h1>
       </div>
       <div className="hero-body" style={{ padding: "0rem 5rem" }}>
         <div className="tile is-ancestor">
           <div className="tile is-6 is-parent">
             <div className="tile is-child box format-box">
-              <h1 className="title is-3">Who We Are</h1>
-              <p>some regular text about this post or some excerpt tings, this is a bit longer exceprt so that
-                it goes onto the next line and well se what happens gonan next ok, ok</p>
+              <h1 className="title is-3">{props.data.subHeading}</h1>
+              <p>{props.data.blurb}</p>
               <span className="button is-link card-btn" data-target="modal-image">Learn More
                 &rarr;</span>
             </div>

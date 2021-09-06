@@ -8,10 +8,9 @@ const Programs = (props) => {
         <div className="tile is-ancestor" style={{flexWrap: "wrap"}}>
           <div className="tile is-12 is-parent" style={{paddingBottom: "0px"}}>
             <div className="tile is-child format-box" style={{padding: "0px", alignItems: "center"}}>
-              <h1 className="title is-3 hero-heading-border">Programs</h1>
+              <h1 className="title is-3 hero-heading-border">{props.data.heading}</h1>
               <p style={{display: "flex", alignItems: "center"}}>Below are some of
-                the most popular programs of utsc msa. You can also check out the full list by following the
-                link
+                {props.data.blurb}
                 <button className="button is-link card-btn is-rounded  is-outlined" style={{margin: "0px 15px"}}>
                   <span>All Programs</span>
                   <span className="icon is-small">

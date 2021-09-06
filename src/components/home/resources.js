@@ -5,14 +5,13 @@ const Resources = (props) => {
   return (
     <section className="hero is-medium" id="resources">
       <div className="hero-heading">
-        <h1 className="title is-3 hero-heading-border">Resources</h1>
+        <h1 className="title is-3 hero-heading-border">{props.data.heading}</h1>
       </div>
       <div className="hero-body" style={{ padding: "4rem 5rem" }}>
         <div className="tile is-ancestor">
           <div className="tile is-7 is-parent is-vertical">
             <div className="tile is-child box format-box">
-              <p style={{ margin: "0px" }}>The MSA has compiled resources for you to meet your islamic needs while
-                on campus. If there is something missing you can always contact us to let us know! </p>
+              <p style={{ margin: "0px" }}> {props.data.blurb} </p>
             </div>
             <div className="img-tile tile is-child ">
               <img
