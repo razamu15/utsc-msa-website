@@ -1,26 +1,69 @@
 import * as React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import About from "../components/home/about"
 import Events from "../components/home/events"
 import Programs from "../components/home/programs"
 import Announcements from "../components/home/announcements"
-import Membership from "../components/home/membership"
+import Action from "../components/home/action"
 import Resources from "../components/home/resources"
 import Sponsors from "../components/home/sponsors"
+import Contact from "../components/connect/contact"
 
 // markup
-const IndexPage = () => {
+const IndexPage = (props) => {
+  let data = props.data.allContentfulPage.nodes[0].content;
+
   return (
-    <Layout heading="MSA" subHeading="some random text" socials={true} size="fullheight">
+    <Layout heading={data.main.heading} subHeading={data.main.blurb} socials={true} size="fullheight">
       <Announcements />
-      <About />
-      <Events />
-      <Programs />
+      <About data={data.sections.about} />
+      <Events data={data.sections.events} />
+      <Programs data={data.sections.programs} />
       <Sponsors />
-      <Resources />
-      <Membership />
+      <Resources data={data.sections.resources} />
+      <Action data={data.sections.action} />
+      <Contact />
     </Layout>
   )
 }
 
 export default IndexPage
+
+export const query = graphql`
+  {
+    allContentfulPage(filter: {title: {eq: "Home"}}) {
+      nodes {
+        content {
+          sections {
+            events {
+              blurb
+              heading
+            }
+            action {
+              blurb
+              heading
+            }
+            programs {
+              blurb
+              heading
+            }
+            resources {
+              blurb
+              heading
+            }
+            about {
+              blurb
+              heading
+              subHeading
+            }
+          }
+          main {
+            blurb
+            heading
+          }
+        }
+      }
+    }
+  }
+`
