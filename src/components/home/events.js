@@ -1,26 +1,7 @@
 import * as React from "react";
-import { graphql, useStaticQuery } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Events = (props) => {
-  const data = useStaticQuery(graphql`{
-    allContentfulEvent(sort: {fields: date, order: ASC}, limit: 2) {
-      nodes {
-        contentful_id
-        title
-        date(formatString: "ddd, MMM Do @ hh:mma")
-        registration
-        slug
-        poster { 
-          file {
-            url
-          }
-          title
-        }
-      }
-    }
-  }`)
-
   return (
     <section className="hero is-fullheight" id="events">
       <div className="hero-body">
@@ -37,7 +18,7 @@ const Events = (props) => {
               </button>
             </div>
           </div>
-          {data.allContentfulEvent.nodes.map(event => {
+          {props.events.nodes.map(event => {
             return (
               <div key={event.contentful_id} className="tile  is-vertical is-parent">
                 <div className="tile is-child shadow-hoverable ">
@@ -82,18 +63,4 @@ const Events = (props) => {
   )
 }
 
-// const yes = () => {
-//   const data = useStaticQuery(graphql`
-//     {
-//       site {
-//         siteMetadata {
-//           title
-//         }
-//       }
-//     }
-//   `)
-//   // let data= {}
-//   console.log(data);
-//   return <div>hi</div>
-// }
 export default Events;

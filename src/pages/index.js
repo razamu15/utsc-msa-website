@@ -18,7 +18,7 @@ const IndexPage = (props) => {
     <Layout heading={data.main.heading} subHeading={data.main.blurb} socials={true} size="fullheight">
       <Announcements />
       <About data={data.sections.about} />
-      <Events data={data.sections.events} />
+      <Events data={data.sections.events} events={props.data.latestEvents} />
       <Programs data={data.sections.programs} />
       <Sponsors />
       <Resources data={data.sections.resources} />
@@ -62,6 +62,21 @@ export const query = graphql`
             blurb
             heading
           }
+        }
+      }
+    }
+  	latestEvents: allContentfulEvent(sort: {fields: date, order: ASC}, limit: 2) {
+      nodes {
+        contentful_id
+        title
+        date(formatString: "ddd, MMM Do @ hh:mma")
+        registration
+        slug
+        poster { 
+          file {
+            url
+          }
+          title
         }
       }
     }
