@@ -1,18 +1,31 @@
 import * as React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
-// markup
 const Volunteering = (props) => {
+   const data = useStaticQuery(graphql`{
+      allContentfulPage(filter: {title: {eq: "Connect"}}) {
+        nodes {
+          content {
+            sections{
+               volunteering{
+                  heading
+                  blurb1
+                  blurb2
+               }
+            }
+          }
+        }
+      }
+   }`)
+   let usableData = data.allContentfulPage.nodes[0].content.sections.volunteering
+
   return (
     <div class="tile is-4 is-parent">
       <div class="tile is-child format-box">
-        <h1 class="title is-3 ">Volunteering</h1>
-        <p>some regular text about this post or some excerpt tings, this is a bit longer exceprt so that
-          it goes onto the next line and well se what happens gonan next ok, ok</p>
+        <h1 class="title is-3 ">{usableData.heading}</h1>
+        <p>{usableData.blurb1}</p>
 
-        <p>shtings split into 2 paragprahss for more nicer tings
-          it goes onto the next line and well se what happens gonan next ok, ok im just gonna add a
-          bunch more text here cz who cares </p>
-        
+        <p>{usableData.blurb2}</p>
       </div>
     </div>
   )
