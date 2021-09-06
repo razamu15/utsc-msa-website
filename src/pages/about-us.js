@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import Mission from "../components/about-us/mission"
 import Values from "../components/about-us/values"
 import Constitution from "../components/about-us/constitution"
+import Team from "../components/about-us/team"
 
 // markup
 const AboutPage = () => {
@@ -22,16 +23,17 @@ const AboutPage = () => {
             <Constitution />
           </div>
         </div>
-
       </section>
 
       <section class="hero is-small" id="team-banner">
         <div class="hero-body">
-          <p class="title is-2" style="color: white; text-align: center; padding: 3rem">
+          <p class="title is-2" style={{color: "white", textAlign: "center", padding: "3rem"}}>
             Meet The Team!
           </p>
         </div>
       </section>
+
+      <Team />
     </Layout>
   )
 }
