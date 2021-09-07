@@ -9,13 +9,13 @@ import Layout from "../components/layout"
 
 // markup
 const ConnectPage = (props) => {
-  let data = props.data.allContentfulPage.nodes[0].content.main;
+  let data = props.data.allContentfulPage.nodes[0].content;
   return (
-    <Layout heading={data.heading} subHeading={data.blurb} socials={false} size="medium">
-      <Involvement>
-        <Membership />
-        <Volunteering />
-        <ExecTeam />
+    <Layout heading={data.main.heading} subHeading={data.main.blurb} socials={false} size="medium">
+      <Involvement data={data.sections.involvement}>
+        <Membership data={data.sections.membership}/>
+        <Volunteering data={data.sections.volunteering}/>
+        <ExecTeam data={data.sections.exec_team}/>
       </Involvement>
       <Contact />
     </Layout>
@@ -33,6 +33,27 @@ export const query = graphql`
           main {
             blurb
             heading
+          }
+          sections {
+            involvement {
+              blurb
+              heading
+            }
+            exec_team {
+              blurb1
+              blurb2
+              heading
+            }
+            volunteering {
+              blurb1
+              blurb2
+              heading
+            }
+            membership {
+              blurb1
+              blurb2
+              heading
+            }
           }
         }
       }
