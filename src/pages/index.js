@@ -16,10 +16,10 @@ const IndexPage = (props) => {
 
   return (
     <Layout heading={data.main.heading} subHeading={data.main.blurb} socials={true} size="fullheight">
-      <Announcements />
+      <Announcements announcements={props.data.latestAnnouncements}/>
       <About data={data.sections.about} />
       <Events data={data.sections.events} events={props.data.latestEvents} />
-      <Programs data={data.sections.programs} />
+      <Programs data={data.sections.programs} programs={props.data.showcasePrograms} />
       <Sponsors />
       <Resources data={data.sections.resources} />
       <Action data={data.sections.action} />
@@ -77,6 +77,30 @@ export const query = graphql`
             url
           }
           title
+        }
+      }
+    }
+    showcasePrograms: allContentfulProgram(filter: {showcase: {eq: true}}) {
+      nodes {
+        contentful_id
+        title
+        slug
+        description {
+          description
+        }
+        poster {
+          file {
+            url
+          }
+        }
+      }
+    }
+    latestAnnouncements: allContentfulAnnouncement(sort: {fields: date, order: ASC}, limit: 3) {
+      nodes {
+        title
+        date
+        body {
+          raw
         }
       }
     }
