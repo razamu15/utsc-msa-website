@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../styles/global.css";
 import "../utils/font-awesome"
@@ -19,9 +20,9 @@ const Layout = (props) => {
           <nav className="navbar">
             <div className="container">
               <div className="navbar-brand">
-                <a className="navbar-item" href="home.html">
+                <Link className="navbar-item" to="/">
                   <img src="http://bulma.io/images/bulma-type-white.png" alt="Logo" />
-                </a>
+                </Link>
                 <span ref={burger} onClick={toggleMenu} className="navbar-burger burger" data-target="navbarMenu">
                   <span></span>
                   <span></span>
@@ -31,134 +32,134 @@ const Layout = (props) => {
               <div ref={menu} id="navbarMenu" className="navbar-menu">
                 <div className="navbar-end">
                   <span className="navbar-item has-dropdown is-hoverable">
-                    <a className="button navbar-link is-arrowless">
+                    <Link to="/about-us" className="button navbar-link is-arrowless">
                       <span className="icon">
                         <FontAwesomeIcon icon="sitemap" />
                       </span>
                       <span>About Us</span>
-                    </a>
+                    </Link>
 
                     <div className="navbar-dropdown ">
                       <span className="navbar-item">
-                        <a className="button" href="#">
+                        <Link to="/about-us/#mission" className="button">
                           <span className="icon">
                             <FontAwesomeIcon icon="file-alt" />
                           </span>
                           <span>Mission & Values</span>
-                        </a>
+                        </Link>
                       </span>
                       <span className="navbar-item">
-                        <a className="button" href="#">
+                        <Link to="/about-us/#constitution" className="button">
                           <span className="icon">
                             <FontAwesomeIcon icon="university" />
                           </span>
                           <span>Constitution</span>
-                        </a>
+                        </Link>
                       </span>
                       <span className="navbar-item">
-                        <a className="button" href="#">
+                        <Link to="/about-us/#team-banner" className="button">
                           <span className="icon">
                             <FontAwesomeIcon icon="smile" />
                           </span>
                           <span>Meet the Team</span>
-                        </a>
+                        </Link>
                       </span>
                     </div>
                   </span>
                   <span className="navbar-item has-dropdown is-hoverable">
-                    <a className="button navbar-link is-arrowless">
+                    <Link to="/resources" className="button navbar-link is-arrowless">
                       <span className="icon">
                         <FontAwesomeIcon icon="kaaba" />
                       </span>
                       <span>Islamic Resources</span>
-                    </a>
+                    </Link>
 
                     <div className="navbar-dropdown ">
                       <span className="navbar-item">
-                        <a className="button" href="#">
+                        <Link to="/resources/#jummuah" className="button">
                           <span className="icon">
                             <FontAwesomeIcon icon="pray" />
                           </span>
                           <span>Jummuah</span>
-                        </a>
+                        </Link>
                       </span>
                       <span className="navbar-item">
-                        <a className="button" href="#">
+                        <Link to="/resources/#praying-areas" className="button">
                           <span className="icon">
                             <FontAwesomeIcon icon="mosque" />
                           </span>
                           <span>Praying Areas</span>
-                        </a>
+                        </Link>
                       </span>
                       <span className="navbar-item">
-                        <a className="button" href="#">
+                        <Link to="/resources/#halal-food" className="button">
                           <span className="icon">
                             <FontAwesomeIcon icon="utensils" />
                           </span>
                           <span>Halal Food</span>
-                        </a>
+                        </Link>
                       </span>
                     </div>
                   </span>
                   <span className="navbar-item has-dropdown is-hoverable">
-                    <a className="button navbar-link is-arrowless">
+                    <Link to="/progs-events" className="button navbar-link is-arrowless">
                       <span className="icon">
                         <FontAwesomeIcon icon="users" />
                       </span>
                       <span>Programs & Events</span>
-                    </a>
+                    </Link>
 
                     <div className="navbar-dropdown ">
                       <span className="navbar-item">
-                        <a className="button" href="#">
+                        <Link to="/progs-events/#announcements" className="button">
                           <span className="icon">
                             <FontAwesomeIcon icon="bullhorn" />
                           </span>
                           <span>Announcements</span>
-                        </a>
+                        </Link>
                       </span>
                       <span className="navbar-item">
-                        <a className="button" href="#">
+                        <Link to="/progs-events/#events" className="button">
                           <span className="icon">
                             <FontAwesomeIcon icon="calendar-alt" />
                           </span>
                           <span>Events</span>
-                        </a>
+                        </Link>
                       </span>
                       <span className="navbar-item">
-                        <a className="button" href="#">
+                        <Link to="/progs-events/#programs" className="button">
                           <span className="icon">
                             <FontAwesomeIcon icon="users" />
                           </span>
                           <span>Programs</span>
-                        </a>
+                        </Link>
                       </span>
                     </div>
                   </span>
                   <span className="navbar-item has-dropdown is-hoverable">
-                    <a className="button navbar-link is-arrowless">
+                    <Link to="/connect" className="button navbar-link is-arrowless">
                       <span className="icon">
                         <FontAwesomeIcon icon="link" />
                       </span>
                       <span>Connect</span>
-                    </a>
+                    </Link>
 
                     <div className="navbar-dropdown ">
                       <span className="navbar-item">
-                        <a className="button" href="#" style={{ padding: "25px 15px" }}>
+                        <Link to="/connect/#involvement" className="button" style={{ padding: "25px 15px" }}>
                           <span className="icon">
                             <FontAwesomeIcon icon="hands-helping" />
                           </span>
                           <span>Get <br /> Involved</span>
-                        </a>
+                        </Link>
                       </span>
                       <span className="navbar-item">
-                        <a className="button" href="#">
+                        <Link to="/connect/#contact" className="button">
                           <span className="icon">
                             <FontAwesomeIcon icon="phone-square" />
                           </span>
                           <span>Contact</span>
-                        </a>
+                        </Link>
                       </span>
                     </div>
                   </span>

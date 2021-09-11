@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Events = (props) => {
@@ -43,12 +44,12 @@ const Events = (props) => {
                           </p> : false
                         }
                         <p class="control">
-                          <a href={`/events/${event.slug}`} className="button is-link card-btn">
-                            <span>Learn More</span>
+                          <Link to={`/events/${event.slug}`} className="button is-link card-btn">
+                            <span>View Details</span>
                             <span className="icon is-small">
                               <FontAwesomeIcon icon="info" />
                             </span>
-                          </a>
+                          </Link>
                         </p>
                       </div>
                     </div>

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Programs = (props) => {
@@ -33,9 +34,13 @@ const Programs = (props) => {
                   <div className="card-content">
                     <div className="content has-text-centered">
                       <h3>{prog.title}</h3>
-                      <p>{prog.description.description.length > 115 ? `${prog.description.description.substring(0,115)}...` : prog.description.description}</p>
-                      <span className="button is-link card-btn" data-target="modal-image">View Details
-                        &rarr;</span>
+                      <p>{prog.description.description.length > 115 ? `${prog.description.description.substring(0, 115)}...` : prog.description.description}</p>
+                      <Link to={`/programs/${prog.slug}`} className="button is-link card-btn">
+                        <span>Learn More</span>
+                        <span className="icon is-small">
+                          <FontAwesomeIcon icon="info" />
+                        </span>
+                      </Link>
                     </div>
                   </div>
                 </div>
