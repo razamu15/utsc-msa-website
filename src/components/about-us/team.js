@@ -8,7 +8,7 @@ const Team = (props) => {
           {props.data.map(teamMember => {
             return (
               <div class="column columns is-4  member-list-item">
-                <figure class="image is-64x64 column is-4">
+                <figure class="image is-64x64 column is-3">
                   <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" />
                 </figure>
                 <div class="member-info column">

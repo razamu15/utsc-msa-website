@@ -40,8 +40,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // But only if there's at least one blog post found in Contentful
   // `context` is available in the template as a prop and as a variable in GraphQL
   events.forEach(ev => {
-    console.log(ev);
-
     createPage({
       path: `/events/${ev.slug}/`,
       component: eventComponent,
@@ -51,8 +49,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
   programs.forEach(prog => {
-    console.log(prog)
-
     createPage({
       path: `/programs/${prog.slug}/`,
       component: programComponent,

@@ -11,11 +11,9 @@ const Detail = (props) => {
         <label class="label">{props.label}</label>
       </div>
       <div class="field-body">
-
         <p class="control">
           <input class="input is-static" type="text" value={props.value} readOnly />
         </p>
-
       </div>
     </div>
   )
@@ -24,16 +22,16 @@ const Detail = (props) => {
 const EventPage = (props) => {
   console.log(props)
   const event = props.data.contentfulEvent
-  const back = 
-  <a class="button is-outlined is-inverted">
-    <span class="icon">
-      <FontAwesomeIcon icon="arrow-left" />
-    </span>
-    <span>All Events</span>
-  </a>
+  const back =
+    <a class="button is-outlined is-inverted">
+      <span class="icon">
+        <FontAwesomeIcon icon="arrow-left" />
+      </span>
+      <span>All Events</span>
+    </a>
 
   return (
-    <Layout heading="Events" subHeading={back} socials={false} size="halfheight">
+    <Layout heading="Events" subHeading={back} socials={false} size="medium">
       <section class="hero is-medium" >
         <div class="hero-body" style={{ padding: "4rem 5rem 4rem 5rem" }}>
           <div class="tile is-ancestor" style={{ flexWrap: "wrap" }}>
@@ -53,8 +51,19 @@ const EventPage = (props) => {
                 <h1 class="title is-3 hero-heading-border">Details</h1>
                 <Detail label="Date" value={event.day} />
                 <Detail label="Time" value={event.time} />
-                <Detail label="Registration Required" value={event.registration ? "Yes" : "No"} />
                 <Detail label="Location" value={event.location} />
+                <Detail label="Registration Required" value={event.registration ? "Yes" : "No"} />
+                {event.registration ?
+                  <p class="control">
+                    <a href={event.registration} className="button is-primary card-btn">
+                      <span>Register</span>
+                      <span className="icon is-small">
+                        <FontAwesomeIcon icon="user-plus" />
+                      </span>
+                    </a>
+                  </p>
+                  : false
+                }
               </div>
             </div>
             <div class="tile is-8 is-parent" >
