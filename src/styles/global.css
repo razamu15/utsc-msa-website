@@ -36,7 +36,7 @@ body {
 }
 
 .navbar-dropdown {
-    background: transparent;
+    background: rgba(0, 0, 0, 0.5);
     border: solid white 1px;
     border-radius: 0.5em;
 }
@@ -170,7 +170,7 @@ body {
     margin: 0px !important;
   }
 
-  .tile p{
+  .tile p:not(.control){
     margin: 1rem 0rem;
   }
 
