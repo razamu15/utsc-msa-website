@@ -35,7 +35,7 @@ const Announcements = (props) => {
               <h1 className="title is-6 is-italic">September 1, 2020</h1>
             </div>
             <div className="tile is-child">
-              <button className="button is-link card-btn is-rounded  is-outlined" style={{margin: "0px 15px"}}>
+              <button className="button card-btn is-rounded msa-brown-outline">
                 <span>View All Announcements</span>
                 <span className="icon is-small">
                   <FontAwesomeIcon icon="arrow-right" />

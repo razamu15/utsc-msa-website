@@ -12,7 +12,7 @@ const Programs = (props) => {
               <h1 className="title is-3 hero-heading-border">{props.data.heading}</h1>
               <p style={{ display: "flex", alignItems: "center" }}>Below are some of
                 {props.data.blurb}
-                <button className="button is-link card-btn is-rounded  is-outlined" style={{ margin: "0px 15px" }}>
+                <button className="button card-btn is-rounded msa-brown-outline">
                   <span>All Programs</span>
                   <span className="icon is-small">
                     <FontAwesomeIcon icon="arrow-right" />

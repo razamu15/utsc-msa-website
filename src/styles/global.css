@@ -9,7 +9,30 @@ body {
 
 .is-msa-blue{
   background-color: #71add5 !important;
-  /* color: #71add5 ;  */
+}
+
+.is-msa-brown{
+  background-color: #edd381 !important;
+}
+
+.msa-brown-outline{
+  color: #edd381 !important;
+  border-color: #edd381;
+  border-width: 2.5px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0px 15px;
+  transition: all .27s ease-in-out;
+}
+
+.msa-brown-outline:hover{
+  color: white !important;
+  background-color: #edd381 !important;
+  border-color: white;
+}
+
+.has-text-msa-blue{
+  color: #71add5 !important; 
 }
 
 .title.is-3{

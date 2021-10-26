@@ -11,7 +11,7 @@ const Events = (props) => {
             <div className="tile is-child format-box">
               <h1 className="title is-3 hero-heading-border">Latest Events</h1>
               <p> {props.data.blurb} </p>
-              <button className="button is-link card-btn is-rounded  is-outlined" style={{ margin: "0px 15px" }}>
+              <button className="button  card-btn is-rounded  is-outlined msa-brown-outline" style={{}}>
                 <span>All Events</span>
                 <span className="icon is-small">
                   <FontAwesomeIcon icon="arrow-right" />
@@ -35,7 +35,7 @@ const Events = (props) => {
                       <div class="field is-grouped">
                         {event.registration ?
                           <p class="control">
-                            <a href={event.registration} className="button is-primary card-btn">
+                            <a href={event.registration} className="button is-msa-brown card-btn">
                               <span>Register</span>
                               <span className="icon is-small">
                                 <FontAwesomeIcon icon="user-plus" />
