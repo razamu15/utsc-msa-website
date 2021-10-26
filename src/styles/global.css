@@ -7,6 +7,15 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
+.is-msa-blue{
+  background-color: #71add5 !important;
+  /* color: #71add5 ;  */
+}
+
+.title.is-3{
+  color: #180829
+}
+
 #landing-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)), url('https://msautsc.com/wp-content/uploads/2018/11/hero-bg.jpg') no-repeat center center fixed;
@@ -63,7 +72,7 @@ body {
   }
   .hero-heading-border{
     padding-bottom: .75rem; 
-    border-bottom: solid #147efb 3px;
+    border-bottom: solid #71add5 3px;
   }
   .hero-body{
     justify-content: center;

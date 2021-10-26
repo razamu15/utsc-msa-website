@@ -44,7 +44,7 @@ const Events = (props) => {
                           </p> : false
                         }
                         <p class="control">
-                          <Link to={`/events/${event.slug}`} className="button is-link card-btn">
+                          <Link to={`/events/${event.slug}`} className="button is-link is-msa-blue card-btn">
                             <span>View Details</span>
                             <span className="icon is-small">
                               <FontAwesomeIcon icon="info" />

@@ -15,7 +15,7 @@ const About = (props) => {
               <h1 className="title is-3">{props.data.subHeading}</h1>
               <p>{props.data.blurb}</p>
 
-              <Link to={`/about-us`} className="button is-link card-btn">
+              <Link to={`/about-us`} className="button is-link is-msa-blue card-btn">
                 <span>Learn More</span>
                 <span className="icon is-small">
                   <FontAwesomeIcon icon="arrow-right" />

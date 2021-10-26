@@ -286,7 +286,7 @@ const Layout = (props) => {
                 some stuff about a newsletter, add a good amount of extra text here to make it lokk whaever
               </h4>
 
-              <span className="button is-link card-btn" data-target="modal-image">Sign up
+              <span className="button is-link is-msa-blue card-btn" data-target="modal-image">Sign up
                 &rarr;</span>
 
             </div>

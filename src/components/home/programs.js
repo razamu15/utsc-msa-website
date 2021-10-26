@@ -35,7 +35,7 @@ const Programs = (props) => {
                     <div className="content has-text-centered">
                       <h3>{prog.title}</h3>
                       <p>{prog.description.description.length > 115 ? `${prog.description.description.substring(0, 115)}...` : prog.description.description}</p>
-                      <Link to={`/programs/${prog.slug}`} className="button is-link card-btn">
+                      <Link to={`/programs/${prog.slug}`} className="button is-link is-msa-blue card-btn">
                         <span>Learn More</span>
                         <span className="icon is-small">
                           <FontAwesomeIcon icon="info" />

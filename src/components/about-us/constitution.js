@@ -9,7 +9,7 @@ const Constitution = (props) => {
 
         <p>{props.data.blurb2}</p>
 
-        <span class="button is-link card-btn" data-target="modal-image">View Full Constitution
+        <span class="button is-link is-msa-blue card-btn" data-target="modal-image">View Full Constitution
           &rarr;</span>
       </div>
     </div>
