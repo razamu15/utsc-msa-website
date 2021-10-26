@@ -12,7 +12,7 @@ const About = (props) => {
         <div className="tile is-ancestor">
           <div className="tile is-6 is-parent">
             <div className="tile is-child box format-box">
-              <h1 className="title is-3">{props.data.subHeading}</h1>
+              <h1 className="title is-4">{props.data.subHeading}</h1>
               <p>{props.data.blurb}</p>
 
               <Link to={`/about-us`} className="button is-link is-msa-blue card-btn">

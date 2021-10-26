@@ -94,6 +94,7 @@ body {
     margin: 4rem 1rem -0.5rem 1rem;
   }
   .hero-heading-border{
+    text-transform: uppercase;
     padding-bottom: .75rem; 
     border-bottom: solid #71add5 3px;
   }
