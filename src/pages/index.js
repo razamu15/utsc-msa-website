@@ -15,7 +15,7 @@ const IndexPage = (props) => {
   let data = props.data.allContentfulPage.nodes[0].content;
 
   return (
-    <Layout heading={data.main.heading} subHeading={data.main.blurb} socials={true} size="fullheight">
+    <Layout home={true} socials={true} size="fullheight">
       <Announcements announcements={props.data.latestAnnouncements}/>
       <About data={data.sections.about} />
       <Events data={data.sections.events} events={props.data.latestEvents} />

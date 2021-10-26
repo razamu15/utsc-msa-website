@@ -171,22 +171,40 @@ const Layout = (props) => {
 
         <div className="hero-body">
           <div className="container has-text-centered">
-            <div className="column is-6 is-offset-3">
-              <h1 className="title has-text-white">
-                {props.heading}
-              </h1>
-              <h2 className="subtitle">
-                {props.subHeading}
-              </h2>
+            <div className="column is-6 is-offset-3  has-text-centered">
+              {props.home ?
+                <>
+                  <h1 className="title has-text-white" style={{margin: '0px'}}>
+                    WELCOME TO
+                  </h1>
+                  <h1 className="title has-text-white" style={{fontSize: '7rem', fontWeight: '900'}}>
+                    MSA
+                  </h1>
+                  <h1 className="title has-text-white" style={{margin: '0px',fontWeight: '1000', fontSize:'3rem', textAlign: 'center'}}>
+                    <span style={{letterSpacing: '2rem'}}>UTS</span>C
+                  </h1>
+                  <h2 className="subtitle">
+                  </h2>
+                </> :
+                <>
+                  <h1 className="title has-text-white">
+                    {props.heading}
+                  </h1>
+                  <h2 className="subtitle">
+                    {props.subHeading}
+                  </h2>
+                </>
+              }
+
               {props.socials ?
                 <div className="social-media">
-                  <a href="https://facebook.com" target="_blank" className="button is-light is-large">
+                  <a href="https://www.facebook.com/msautsc" target="_blank" className="button is-light is-large">
                     <FontAwesomeIcon icon={['fab', 'facebook']} />
                   </a>
-                  <a href="https://instagram.com" target="_blank" className="button is-light is-large">
+                  <a href="https://www.instagram.com/msa_utsc/?hl=en" target="_blank" className="button is-light is-large">
                     <FontAwesomeIcon icon={['fab', 'instagram']} />
                   </a>
-                  <a href="https://twitter.com" target="_blank" className="button is-light is-large">
+                  <a href="https://twitter.com/utscmsa?lang=en" target="_blank" className="button is-light is-large">
                     <FontAwesomeIcon icon={['fab', 'twitter']} />
                   </a>
                 </div>

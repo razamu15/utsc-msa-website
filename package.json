@@ -21,8 +21,8 @@
     "@fortawesome/react-fontawesome": "^0.1.15",
     "gatsby": "^3.13.0",
     "gatsby-plugin-fontawesome-css": "^1.1.0",
-    "gatsby-source-contentful": "^5.13.0",
     "gatsby-plugin-image": "1.13.0",
+    "gatsby-source-contentful": "^5.13.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }
