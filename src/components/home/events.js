@@ -21,11 +21,11 @@ const Events = (props) => {
           </div>
           {props.events.nodes.map(event => {
             return (
-              <div key={event.contentful_id} className="tile is-vertical is-parent home-event" >
+              <div key={event.contentful_id} className="tile  is-vertical is-parent">
                 <div className="tile is-child shadow-hoverable ">
                   <div className="card-image">
-                    <figure className="">
-                      <img className="home-event-img" src={event.poster.file.url} alt={event.poster.title} />
+                    <figure className="image is-5by4">
+                      <img src={event.poster.file.url} alt={event.poster.title} />
                     </figure>
                   </div>
                   <div className="card-content">
