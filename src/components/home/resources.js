@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Resources = (props) => {
@@ -20,7 +21,7 @@ const Resources = (props) => {
             </div>
           </div>
           <div className="tile is-parent is-vertical">
-            <div className="tile is-child box shadow-hoverable format-box">
+            <Link to={'/resources/#jummuah'} className="tile is-child box shadow-hoverable format-box">
               <div className="resource-tile">
                 <span className="icon has-text-msa-blue is-large">
                   <FontAwesomeIcon icon="pray" size="2x" />
@@ -28,8 +29,8 @@ const Resources = (props) => {
                 <h1 className=" title is-4">Jummuah</h1>
               </div>
               <p>See Jummuah timings on campus</p>
-            </div>
-            <div className="tile is-child box shadow-hoverable format-box">
+            </Link>
+            <Link to={'/resources/#praying-areas'} className="tile is-child box shadow-hoverable format-box">
               <div className="resource-tile">
                 <span className="icon has-text-msa-blue is-large">
                   <FontAwesomeIcon icon="mosque" size="2x" />
@@ -37,8 +38,8 @@ const Resources = (props) => {
                 <h1 className=" title is-4">Praying Areas</h1>
               </div>
               <p>Prayer Space on Campus</p>
-            </div>
-            <div className="tile is-child box shadow-hoverable format-box">
+            </Link>
+            <Link to={'/resources/#halal-food'} className="tile is-child box shadow-hoverable format-box">
               <div className="resource-tile">
                 <span className="icon has-text-msa-blue is-large">
                   <FontAwesomeIcon icon="utensils" size="2x" />
@@ -46,7 +47,7 @@ const Resources = (props) => {
                 <h1 className=" title is-4">Halal Food</h1>
               </div>
               <p>Find halal place to eat in and around the campus</p>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

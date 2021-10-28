@@ -9,7 +9,7 @@ const Membership = (props) => {
 
         <p>{props.data.blurb2}</p>
         
-        <span className="button is-link is-msa-blue card-btn" data-target="modal-image">Register &rarr;</span>
+        <a href={props.data.link} className="button is-link is-msa-blue card-btn" data-target="modal-image">Register &rarr;</a>
       </div>
     </div>
   )

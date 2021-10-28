@@ -94,7 +94,7 @@ body {
     margin: 4rem 1rem -0.5rem 1rem;
   }
   .hero-heading-border{
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding-bottom: .75rem; 
     border-bottom: solid #71add5 3px;
   }
@@ -398,7 +398,8 @@ body {
   .team-grid{
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 0px 20px;
   }
 
@@ -531,6 +532,17 @@ body {
 
   .event .button{
     margin: 0px;
+  }
+
+  .prog-list{
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  .prog-name{
+    margin: 10px 10px 10px 20px;
   }
 
   .all-single-event{
