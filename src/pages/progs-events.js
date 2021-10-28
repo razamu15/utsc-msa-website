@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Events from "../components/progs-events/events"
 import Announcements from "../components/progs-events/announcement"
+import Programs from "../components/progs-events/programs"
 
 // markup
 const Section = (props) => {
@@ -37,7 +38,9 @@ const PEPage = (props) => {
         <Events />
       </Section>
 
-      <Section id="programs" data={data.sections.programs} />
+      <Section id="programs" data={data.sections.programs}>
+        <Programs data={data.sections.programs} programs={props.data.programs} />
+      </Section>
 
     </Layout>
   )
@@ -69,6 +72,29 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+    programs: allContentfulProgram {
+      nodes {
+        contentful_id
+        title
+        slug
+        description {
+          description
+        }
+        poster {
+          file {
+            url
+          }
+        }
+      }
+    }
+    events: allContentfulEvent(sort: {fields: date, order: ASC}) {
+      nodes {
+        contentful_id
+        title
+        date(formatString: "ddd, MMM Do @ hh:mma")
+        slug
       }
     }
   }
