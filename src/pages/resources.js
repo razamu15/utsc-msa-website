@@ -1,6 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Food from "../components/resources/food"
 
 // markup
 const Section = (props) => {
@@ -12,6 +13,7 @@ const Section = (props) => {
             <div class="tile is-child format-box" >
               <h1 class="title is-2 hero-heading-border">{props.data.heading}</h1>
               <p>{props.data.blurb}</p>
+              {props.children}
             </div>
           </div>
         </div>
@@ -25,11 +27,15 @@ const ResourcesPage = (props) => {
 
   return (
     <Layout heading={data.main.heading} subHeading={data.main.blurb} socials={false} size="medium">
-      <Section id="jummuah" data={data.sections.jummuah} />
+      
+      <Section id="jummuah" data={data.sections.jummuah}> </ Section>
 
-      <Section id="praying-areas" data={data.sections.praying_areas} />
+      <Section id="praying-areas" data={data.sections.praying_areas}> </ Section>
 
-      <Section id="halal-food" data={data.sections.halal_food} />
+      <Section id="halal-food" data={data.sections.halal_food}> 
+        <Food />
+      </Section>
+
 
     </Layout>
   )

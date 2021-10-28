@@ -395,4 +395,62 @@ body {
     height: auto;
   }
 
+  .team-grid{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 0px 20px;
+  }
+
+  .member-list-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+  }
+
+  .member-list-item > figure{
+
+  }
+
+  .member-info{
+    margin: 0px 20px;
+  }
+
+  .member-info .name{
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+  .member-info .position{
+    font-style: italic;
+    font-size: .95rem;
+  }
+
+  .res-list{
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .restaurant{
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: center;
+    padding: 20px;
+    
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+    color: #4a4a4a;
+  }
+
+  .res-info{
+    margin: 10px 10px 10px 40px;
+  }
+
+  .res-info .control{
+    margin-top: 10px;
+  }
    
