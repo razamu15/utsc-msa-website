@@ -127,12 +127,6 @@ body {
     color: #209cee;
   }
 
-  .event-body {
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-  }
-
   .card-content .content {
     display: flex;
     flex-direction: column;
@@ -256,6 +250,22 @@ body {
 
   .resource-tile + p{
     margin: 0px;
+  }
+
+  .home-event{
+    /* margin: 0px 15px !important; */
+  }
+
+  .home-event > .tile.is-child{
+    /* min-width: 310px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-event-img{
+    height: 245px;
+    min-width: 310px;
   }
 
   #about{
