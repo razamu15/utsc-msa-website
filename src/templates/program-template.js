@@ -1,38 +1,34 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ProgramPage = (props) => {
   console.log(props)
   const prog = props.data.contentfulProgram
-  const back = 
-  <a class="button is-outlined is-inverted">
-    <span class="icon">
-      <FontAwesomeIcon icon="arrow-left" />
-    </span>
-    <span>All Programs</span>
-  </a>
+  const back =
+    <Link to={`/progs-events/#programs`} className="button is-outlined is-inverted" href="">
+      <span class="icon">
+        <FontAwesomeIcon icon="arrow-left" />
+      </span>
+      <span>All Programs</span>
+    </Link>
 
   return (
-    <Layout heading="Programs" subHeading={back} socials={false} size="medium">
+    <Layout heading={prog.title} subHeading={back} socials={false} size="medium">
       <section class="hero is-medium" >
         <div class="hero-body" style={{ padding: "4rem 5rem 4rem 5rem" }}>
           <div class="tile is-ancestor" style={{ flexWrap: "wrap" }}>
-            <div class="tile is-3 is-parent" >
+            <div class="tile is-6 is-parent" id="mission" >
               <div class="tile is-child format-box" >
-                <h1 class="title is-2">{prog.title}</h1>
+                <p>{prog.description.description}</p>
+
               </div>
             </div>
-            <div id="mission-img" class="tile is-9 is-parent" style={{ justifyContent: "center" }}>
+            <div id="mission-img" class="tile is-6 is-parent" style={{ justifyContent: "center" }}>
               <div class="img-tile tile is-child">
                 <img
                   src={prog.poster.file.url} />
-              </div>
-            </div>
-            <div class="tile is-parent" >
-              <div class="tile is-child format-box" >
-                <p>{prog.description.description}</p>
               </div>
             </div>
           </div>

@@ -481,3 +481,14 @@ body {
     margin-left: auto;
   }
    
+  .event-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px !important;
+  }
+
+  .detail{
+    margin: 10px 15px;
+  }
