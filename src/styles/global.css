@@ -490,7 +490,16 @@ body {
   .pray-area .control, .event .control {
     margin-left: auto;
   }
-   
+
+  table .control a{
+    margin: 0px;
+  }
+
+  tr td:last-child{
+    display: flex;
+    justify-content:center;
+  }
+
   .event-details {
     display: flex;
     flex-direction: row;

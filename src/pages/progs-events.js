@@ -2,6 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Events from "../components/progs-events/events"
+import Announcements from "../components/progs-events/announcement"
 
 // markup
 const Section = (props) => {
@@ -28,7 +29,9 @@ const PEPage = (props) => {
 
   return (
     <Layout heading={data.main.heading} subHeading={data.main.blurb} socials={false} size="medium">
-      <Section id="announcements" data={data.sections.announcements} />
+      <Section id="announcements" data={data.sections.announcements}>
+        <Announcements />
+      </Section>
 
       <Section id="events" data={data.sections.events} >
         <Events />
