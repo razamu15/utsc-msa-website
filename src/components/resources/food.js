@@ -9,7 +9,7 @@ const Restaurant = (props) => {
         </figure>
         <div class="res-info">
           <h1 class="title is-4" style={{marginBottom: '10px !important'}}>{props.data.name}</h1>
-          
+          <p>{props.data.location}</p>
           <p class="control">
             <a href={props.data.link} className="button is-msa-brown card-btn">
               
@@ -24,7 +24,7 @@ const Restaurant = (props) => {
 }
 
 const Food = (props) => {
-  let data = [{name: 'Hero Bruger', link:'#'}, {name: 'paramount', link:'#'}, {name: 'nasir hot dog', link:'#'}]
+  let data = [{name: 'Hero Bruger', location:'inside student centre', link:'#'}, {name: 'paramount', location:'marketpalce', link:'#'}, {name: 'nasir hot dog', location:'outside student centre', link:'#'}]
   return (
     <div class="res-list" id="" >
       {data.map(res => <Restaurant data={res} /> )}

@@ -450,7 +450,34 @@ body {
     margin: 10px 10px 10px 40px;
   }
 
+  .res-info p {
+    margin: 5px 0px !important;
+  }
+
   .res-info .control{
     margin-top: 10px;
+  }
+
+  .pray-areas-list{
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+  }
+
+  .pray-area{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+    color: #4a4a4a;
+  }
+
+  .pray-area .control {
+    margin-left: auto;
   }
    

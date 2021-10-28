@@ -2,6 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Food from "../components/resources/food"
+import Areas from "../components/resources/areas"
 
 // markup
 const Section = (props) => {
@@ -30,7 +31,9 @@ const ResourcesPage = (props) => {
       
       <Section id="jummuah" data={data.sections.jummuah}> </ Section>
 
-      <Section id="praying-areas" data={data.sections.praying_areas}> </ Section>
+      <Section id="praying-areas" data={data.sections.praying_areas}> 
+        <Areas />
+      </ Section>
 
       <Section id="halal-food" data={data.sections.halal_food}> 
         <Food />
