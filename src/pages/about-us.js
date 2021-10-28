@@ -62,9 +62,9 @@ export const query = graphql`
             blurb1
             blurb2
             heading
+            link
           }
           team {
-            
             name
             title
           }
