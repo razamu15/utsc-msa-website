@@ -14,7 +14,6 @@ const Detail = (props) => {
 }
 
 const EventPage = (props) => {
-  console.log(props)
   const event = props.data.contentfulEvent
   const back =
     <Link to={`/progs-events/#events`} className="button is-outlined is-inverted" href="">
@@ -80,6 +79,7 @@ export const query = graphql`
       time: date(formatString: "hh:mma")
       registration
       title
+      location
       poster {
         file {
           url
