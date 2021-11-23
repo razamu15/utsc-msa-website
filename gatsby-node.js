@@ -6,6 +6,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Define a template for blog post
   const eventComponent = path.resolve('./src/templates/event-template.js')
   const programComponent = path.resolve('./src/templates/program-template.js')
+  const announcementComponent = path.resolve('./src/templates/announcement-template.js')
 
   const result = await graphql(
     `
@@ -16,6 +17,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
         allContentfulProgram {
+          nodes {
+            slug
+          }
+        }
+        allContentfulAnnouncement {
           nodes {
             slug
           }
@@ -34,6 +40,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const events = result.data.allContentfulEvent.nodes
   const programs = result.data.allContentfulProgram.nodes
+  const announcements = result.data.allContentfulAnnouncement.nodes
 
 
   // Create blog posts pages
@@ -54,6 +61,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: programComponent,
       context: {
         slug: prog.slug,
+      },
+    })
+  })
+  announcements.forEach(ann => {
+    createPage({
+      path: `/announcement/${ann.slug}/`,
+      component: announcementComponent,
+      context: {
+        slug: ann.slug,
       },
     })
   })
