@@ -35,11 +35,11 @@ const PEPage = (props) => {
       </Section>
 
       <Section id="events" data={data.sections.events} >
-        <Events />
+        <Events events={props.data.events} />
       </Section>
 
       <Section id="programs" data={data.sections.programs}>
-        <Programs data={data.sections.programs} programs={props.data.programs} />
+        <Programs programs={props.data.programs} />
       </Section>
 
     </Layout>
@@ -93,7 +93,10 @@ export const query = graphql`
       nodes {
         contentful_id
         title
-        date(formatString: "ddd, MMM Do @ hh:mma")
+        location
+        day: date(formatString: "ddd")
+        date: date(formatString: "MMM Do")
+        time: date(formatString: "hh:mma")
         slug
       }
     }
