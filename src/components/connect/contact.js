@@ -42,7 +42,7 @@ const Contact = (props) => {
             </div>
 
             <div class="tile is-child box">
-              <form name="contact" method="POST" data-netlify="true">
+              <form name="contact" action="/" method="POST" data-netlify="true">
                 <div class="field is-horizontal">
                   <div class="field-body">
                     <div class="field">
@@ -81,7 +81,7 @@ const Contact = (props) => {
                 </div>
                 <div class="field">
                   <div class="control ">
-                    <button class="button submit-button">
+                    <button type="submit" class="button submit-button">
                       Submit&nbsp;&nbsp;
                         <FontAwesomeIcon icon="paper-plane" />
                     </button>
