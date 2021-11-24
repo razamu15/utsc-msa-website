@@ -1,4 +1,5 @@
 import * as React from "react"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Team = (props) => {
   return (
@@ -8,8 +9,8 @@ const Team = (props) => {
           {props.data.map(teamMember => {
             return (
               <div class="member-list-item">
-                <figure class="image is-64x64">
-                  <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" />
+                <figure class="image is-96x96">
+                  <GatsbyImage image={getImage(teamMember)} alt={teamMember.name} />
                 </figure>
                 <div class="member-info">
                   <h1 class="name">{teamMember.name}</h1>
