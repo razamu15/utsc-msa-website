@@ -5,6 +5,7 @@ import Mission from "../components/about-us/mission"
 import Values from "../components/about-us/values"
 import Constitution from "../components/about-us/constitution"
 import Team from "../components/about-us/team"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 // markup
 const AboutPage = (props) => {
@@ -19,8 +20,7 @@ const AboutPage = (props) => {
             <Mission data={data.sections.mission} />
             <div id="mission-img" class="tile is-6 is-parent" style={{ justifyContent: "center" }}>
               <div class="img-tile tile is-child">
-                <img
-                  src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                <GatsbyImage image={getImage(props.data.group)} alt={"MSA team photo"} />
               </div>
             </div>
             <Values data={data.sections.values} />
@@ -107,6 +107,9 @@ export const query = graphql`
       name: description
       title
       gatsbyImageData(cropFocus: CENTER)
+    }
+    group: contentfulAsset(title: {eq: "Group photo"}) {
+      gatsbyImageData(cropFocus: CENTER, aspectRatio: 1.7)
     }
   }
 `

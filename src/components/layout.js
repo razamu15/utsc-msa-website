@@ -1,12 +1,31 @@
 import * as React from "react";
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useStaticQuery, graphql } from "gatsby"
+
 import "../styles/global.css";
 import "../utils/font-awesome"
 
 const Layout = (props) => {
   let burger = React.useRef(null);
   let menu = React.useRef(null);
+  const data = useStaticQuery(graphql`
+    query layoutQuery {
+      logo: contentfulAsset(title: {eq: "MSA logo"}) {
+        gatsbyImageData(height: 100, layout: FIXED, aspectRatio:1.3)
+        file {
+          url
+        }
+      }
+      back: contentfulAsset(title: {eq: "Landing background"}) {
+        file {
+          url
+        }
+      }
+    }
+  `)
+
+  document.documentElement.style.setProperty('--background-img', `url(${data.back.file.url})`)
 
   function toggleMenu() {
     burger.current.classList.toggle('is-active');
@@ -21,7 +40,7 @@ const Layout = (props) => {
             <div className="container">
               <div className="navbar-brand">
                 <Link className="navbar-item" to="/">
-                  <img src="http://bulma.io/images/bulma-type-white.png" alt="Logo" />
+                  <img id="logo" src={data.logo.file.url} alt="Logo" style={{width: '70px', height:"70px"}} />
                 </Link>
                 <span ref={burger} onClick={toggleMenu} className="navbar-burger burger" data-target="navbarMenu">
                   <span></span>
@@ -31,7 +50,7 @@ const Layout = (props) => {
               </div>
               <div ref={menu} id="navbarMenu" className="navbar-menu">
                 <div className="navbar-end">
-                  <span className="navbar-item has-dropdown is-hoverable">
+                  <span className="navbar-item has-dropdown is-hoverable middle">
                     <Link to="/about-us" className="button navbar-link is-arrowless">
                       <span className="icon">
                         <FontAwesomeIcon icon="sitemap" />
@@ -66,7 +85,7 @@ const Layout = (props) => {
                       </span>
                     </div>
                   </span>
-                  <span className="navbar-item has-dropdown is-hoverable">
+                  <span className="navbar-item has-dropdown is-hoverable middle">
                     <Link to="/resources" className="button navbar-link is-arrowless">
                       <span className="icon">
                         <FontAwesomeIcon icon="kaaba" />
@@ -101,7 +120,7 @@ const Layout = (props) => {
                       </span>
                     </div>
                   </span>
-                  <span className="navbar-item has-dropdown is-hoverable">
+                  <span className="navbar-item has-dropdown is-hoverable middle">
                     <Link to="/progs-events" className="button navbar-link is-arrowless">
                       <span className="icon">
                         <FontAwesomeIcon icon="users" />
@@ -136,7 +155,7 @@ const Layout = (props) => {
                       </span>
                     </div>
                   </span>
-                  <span className="navbar-item has-dropdown is-hoverable">
+                  <span className="navbar-item has-dropdown is-hoverable middle">
                     <Link to="/connect" className="button navbar-link is-arrowless">
                       <span className="icon">
                         <FontAwesomeIcon icon="link" />
@@ -146,7 +165,7 @@ const Layout = (props) => {
 
                     <div className="navbar-dropdown ">
                       <span className="navbar-item">
-                        <Link to="/connect/#involvement" className="button" style={{ padding: "25px 15px" }}>
+                        <Link to="/connect/#involvement" className="button" style={{ padding: "20px 15px" }}>
                           <span className="icon">
                             <FontAwesomeIcon icon="hands-helping" />
                           </span>
