@@ -1,9 +1,10 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 const Announcements = (props) => {
-  let data = [{ slug: 'ann-1', title: 'prayer room closed', time: 'September 8, 2020', content: 'this text is copid from an announcement on the previous website The Multi-Faith Prayer Room (SL281) is closed until further notice due to the lockdown restrictions. If you have any questions or concerns please email us at utscmsa1@gmail.com.' }, { slug: 'ann-2', title: 'school closed', time: 'September 8, 2020', content: 'diff cont' }, { slug: 'ann-3', title: 'life closed', time: 'September 8, 2020', content: 'another diff cont' }]
+  let data = props.announcements.nodes;
 
   const [currentAnn, setCurrentAnn] = React.useState(data[0].slug);
 
@@ -22,8 +23,8 @@ const Announcements = (props) => {
                   <div className="tile is-child box format-box">
                     <h1 className="title is-4">{current.title}</h1>
 
-                    <h1 className="title is-5 is-italic pt-3">{current.time}</h1>
-                    <p>{current.content}</p>
+                    <h1 className="title is-5 is-italic pt-3">{current.date}</h1>
+                    {documentToReactComponents(JSON.parse(current.body.raw))}
 
                   </div>
                 </div>
@@ -38,7 +39,7 @@ const Announcements = (props) => {
                 <div id={ann.slug} className="tile is-child box shadow-hoverable" style={{ cursor: "pointer" }} onClick={event => setCurrentAnn(event.currentTarget.id)}>
                   <h1 className="title is-5">{ann.title}</h1>
                   <br />
-                  <h1 className="title is-6 is-italic">{ann.time}</h1>
+                  <h1 className="title is-6 is-italic">{ann.date}</h1>
                 </div>
               )
             })}

@@ -7,6 +7,10 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
+#announcements ol{
+  margin-left: 20px;
+}
+
 .is-msa-blue{
   background-color: #71add5 !important;
 }

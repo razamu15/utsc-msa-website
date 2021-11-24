@@ -97,8 +97,9 @@ export const query = graphql`
     }
     latestAnnouncements: allContentfulAnnouncement(sort: {fields: date, order: ASC}, limit: 3) {
       nodes {
+        slug
         title
-        date
+        date(formatString: "hh:mma, ddd MMM Do, YYYY")
         body {
           raw
         }

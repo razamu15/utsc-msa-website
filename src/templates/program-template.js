@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ProgramPage = (props) => {
-  console.log(props)
   const prog = props.data.contentfulProgram
   const back =
     <Link to={`/progs-events/#programs`} className="button is-outlined is-inverted" href="">
