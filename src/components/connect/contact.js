@@ -43,6 +43,7 @@ const Contact = (props) => {
 
             <div class="tile is-child box">
               <form name="contact" action="/" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
                 <div class="field is-horizontal">
                   <div class="field-body">
                     <div class="field">
