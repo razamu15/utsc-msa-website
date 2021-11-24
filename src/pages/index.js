@@ -17,7 +17,7 @@ const IndexPage = (props) => {
   return (
     <Layout home={true} socials={true} size="fullheight">
       <Announcements announcements={props.data.latestAnnouncements}/>
-      <About data={data.sections.about} />
+      <About data={data.sections.about} image={props.data.group} />
       <Events data={data.sections.events} events={props.data.latestEvents} />
       <Programs data={data.sections.programs} programs={props.data.showcasePrograms} />
       <Sponsors />
@@ -104,6 +104,9 @@ export const query = graphql`
           raw
         }
       }
+    }
+    group: contentfulAsset(title: {eq: "Group photo"}) {
+      gatsbyImageData(cropFocus: CENTER, aspectRatio: 1.7)
     }
   }
 `

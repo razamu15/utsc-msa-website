@@ -9,6 +9,7 @@ body {
 
 :root {
   --background-img: url('https://msautsc.com/wp-content/uploads/2018/11/hero-bg.jpg');
+  --background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), var(--background-img) no-repeat center center fixed;
 }
 
 #logo{
@@ -58,8 +59,7 @@ body {
 }
 
 #landing-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)), var(--background-img) no-repeat center center fixed;
+    background: var(--background);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -103,6 +103,12 @@ body {
     color: white;
     border: none;
   }
+  
+  .navbar-dropdown > .navbar-item > a {
+    padding: 10px 0px;
+    width: 100%;
+  }
+
   .navbar-item:hover > a{
     background: white;
     color: black;
@@ -278,11 +284,6 @@ body {
     margin: 0px;
   }
 
-  #about{
-    background: linear-gradient(rgba(0, 0, 0, 0.5),
-                    rgba(0, 0, 0, 0.5)), var(--background-img) no-repeat center center fixed;
-  }
-
   .slanted {
     /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 66%, 0 100%);  */
@@ -300,9 +301,8 @@ body {
   }
 
 
-  #about, #membership, #team-banner{
-    background: linear-gradient(rgba(0, 0, 0, 0.5),
-                    rgba(0, 0, 0, 0.5)), var(--background-img) no-repeat center center fixed;
+  #about, #membership, #team-banner, #about{
+    background: var(--background);
   }
 
   #sponsors{

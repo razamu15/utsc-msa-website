@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const About = (props) => {
   return (
@@ -25,8 +26,7 @@ const About = (props) => {
           </div>
           <div className="tile is-6 is-parent" style={{ justifyContent: "center" }}>
             <div className="img-tile tile is-child">
-              <img
-                src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+              <GatsbyImage image={getImage(props.image)} alt={"MSA team photo"} />
             </div>
           </div>
         </div>

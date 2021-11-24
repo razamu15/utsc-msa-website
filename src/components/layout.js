@@ -210,7 +210,7 @@ const Layout = (props) => {
                     {props.heading}
                   </h1>
                   <h2 className="subtitle">
-                    {props.subHeading}
+                    {props.subHeading === "" ? <><br/><br/><br/></>: props.subHeading}
                   </h2>
                 </>
               }
@@ -255,46 +255,6 @@ const Layout = (props) => {
             </div>
 
             <div className="column is-5">
-              <h4 className="bd-footer-title">
-                <strong>Links</strong>
-              </h4>
-
-              <p>
-                <a href="https://bulma.io/blog">
-                  <span className="icon">
-                    <i className="fa fa-superpowers"></i>
-                  </span>
-                  <span><strong>Examples</strong> &nbsp; - extra text if needed</span>
-                </a>
-              </p>
-
-              <p>
-                <a href="https://bulma.io/blog">
-                  <span className="icon">
-                    <i className="fa fa-superpowers"></i>
-                  </span>
-                  <span><strong>Examples</strong>&nbsp; - extra text if needed</span>
-                </a>
-              </p>
-
-              <p>
-                <a href="https://bulma.io/blog">
-                  <span className="icon">
-                    <i className="fa fa-superpowers"></i>
-                  </span>
-                  <span><strong>Examples</strong>&nbsp; </span>
-                </a>
-              </p>
-
-              <p>
-                <a href="https://bulma.io/blog">
-                  <span className="icon">
-                    <i className="fa fa-superpowers"></i>
-                  </span>
-                  <span><strong>Examples</strong>&nbsp; - less extra </span>
-                </a>
-              </p>
-
             </div>
 
             <div className="column is-3">
