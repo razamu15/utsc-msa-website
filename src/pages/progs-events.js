@@ -31,7 +31,7 @@ const PEPage = (props) => {
   return (
     <Layout heading={data.main.heading} subHeading={data.main.blurb} socials={false} size="medium">
       <Section id="announcements" data={data.sections.announcements}>
-        <Announcements />
+        <Announcements announcements={props.data.announcements}/>
       </Section>
 
       <Section id="events" data={data.sections.events} >
@@ -97,6 +97,14 @@ export const query = graphql`
         day: date(formatString: "ddd")
         date: date(formatString: "MMM Do")
         time: date(formatString: "hh:mma")
+        slug
+      }
+    }
+    announcements: allContentfulAnnouncement(sort: {fields: date, order: DESC}) {
+      nodes {
+        contentful_id
+        date(formatString: "hh:mma, ddd MMM Do")
+        title
         slug
       }
     }

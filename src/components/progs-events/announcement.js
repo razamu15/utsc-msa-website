@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Announcments = (props) => {
   let data = [{ name: 'some random thing', location: 'seomwhere on camputs', day: 'Sun', date: 'Sep 21', time: '11;00 am', slug: 'ting-ting' }]
 
+
   return (
     <table class="table is-fullwidth is-hoverable">
       <thead>
@@ -16,48 +17,24 @@ const Announcments = (props) => {
       </thead>
 
       <tbody>
-        <tr class="">
-          <td>monday. 13 sep, 5pm</td>
-          <td>School Closed</td>
-          <td>
-            <p class="control">
-              <Link to={'#'} class="button is-msa-brown card-btn">
-                <span>View Full</span>
-                <span class="icon is-small">
-                  <FontAwesomeIcon icon="scroll" />
-                </span>
-              </Link>
-            </p>
-          </td>
-        </tr>
-        <tr class="">
-          <td>monday. 13 sep, 5pm</td>
-          <td>School Closed</td>
-          <td>
-            <p class="control">
-              <Link to={'#'} class="button is-msa-brown card-btn">
-                <span>View Full</span>
-                <span class="icon is-small">
-                  <FontAwesomeIcon icon="scroll" />
-                </span>
-              </Link>
-            </p>
-          </td>
-        </tr>
-        <tr class="">
-          <td>monday. 13 sep, 5pm</td>
-          <td>School Closed</td>
-          <td>
-            <p class="control">
-              <Link to={'#'} class="button is-msa-brown card-btn">
-                <span>View Full</span>
-                <span class="icon is-small">
-                  <FontAwesomeIcon icon="scroll" />
-                </span>
-              </Link>
-            </p>
-          </td>
-        </tr>
+        {props.announcements.nodes.map(ann => {
+          return (
+            <tr id={ann.contentful_id} class="">
+              <td>{ann.date}</td>
+              <td>{ann.title}</td>
+              <td>
+                <p class="control">
+                  <Link to={`/announcement/${ann.slug}`} class="button is-msa-brown card-btn">
+                    <span>View Full</span>
+                    <span class="icon is-small">
+                      <FontAwesomeIcon icon="scroll" />
+                    </span>
+                  </Link>
+                </p>
+              </td>
+            </tr>
+          )
+        })}
       </tbody>
     </table>
   )
