@@ -23,31 +23,31 @@ const Contact = (props) => {
               <a href="mailto:something@gmail.com" class="button is-light is-primary is-outlined">
                 <FontAwesomeIcon icon="envelope" />
               </a>
-              <a href="https://facebook.com" target="_blank" className="button is-light is-link is-outlined">
+              <a href="https://www.facebook.com/msautsc" target="_blank" className="button is-light is-link is-outlined">
                 <FontAwesomeIcon icon={['fab', 'facebook']} />
               </a>
-              <a href="https://instagram.com" target="_blank" className="button is-light is-warning is-outlined">
+              <a href="https://www.instagram.com/msa_utsc/?hl=en" target="_blank" className="button is-light is-warning is-outlined">
                 <FontAwesomeIcon icon={['fab', 'instagram']} />
               </a>
-              <a href="https://twitter.com" target="_blank" className="button is-light is-info is-outlined">
+              <a href="https://twitter.com/utscmsa?lang=en" target="_blank" className="button is-light is-info is-outlined">
                 <FontAwesomeIcon icon={['fab', 'twitter']} />
               </a>
-              <a href="https://linkedin.com" target="_blank" className="button is-light is-info is-outlined">
+              <a href="https://www.linkedin.com/in/msa-utsc-659914218/?originalSubdomain=ca" target="_blank" className="button is-light is-info is-outlined">
                 <FontAwesomeIcon icon={['fab', 'linkedin']} />
               </a>
-              <a href="https://www.tiktok.com/en" target="_blank" className="button is-light is-danger is-outlined">
+              <a href="https://www.tiktok.com/@msa_utsc?" target="_blank" className="button is-light is-danger is-outlined">
                 <FontAwesomeIcon icon={['fab', 'tiktok']} />
               </a>
               
             </div>
 
             <div class="tile is-child box">
-              <form action="https://formspree.io/email@example.com" method="POST">
+              <form name="contact" method="POST" data-netlify="true">
                 <div class="field is-horizontal">
                   <div class="field-body">
                     <div class="field">
                       <div class="control is-expanded has-icons-left">
-                        <input class="input" type="text" placeholder="Jane Doe" />
+                        <input name="name" class="input" type="text" placeholder="Jane Doe" />
                         <span class="icon is-small is-left">
                           <FontAwesomeIcon icon="user" />
                         </span>
@@ -58,7 +58,7 @@ const Contact = (props) => {
                     </div>
                     <div class="field">
                       <div class="control is-expanded has-icons-left ">
-                        <input class="input" type="text" placeholder="example@email.com" />
+                        <input name="email" class="input" type="text" placeholder="example@email.com" />
                         <span class="icon is-small is-left">
                           <FontAwesomeIcon icon="envelope" />
                         </span>
@@ -73,7 +73,7 @@ const Contact = (props) => {
 
                 <div class="field">
                   <div class="control">
-                    <textarea class="textarea" placeholder="Textarea" name="Message"></textarea>
+                    <textarea class="textarea" placeholder="Textarea" name="message"></textarea>
                   </div>
                   <span class="help">
                     <strong>Message</strong>
