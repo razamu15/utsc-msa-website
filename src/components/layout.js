@@ -33,7 +33,7 @@ const Layout = (props) => {
   }
 
   return (
-    <main id="page-root" style={{'----background-img': `url(${data.back.file.url})`}}>
+    <main id="page-root" style={{'--background-img': `url(${data.back.file.url})`}}>
       <section className={`hero is-${props.size}`} id="landing-hero">
         <div className="hero-head">
           <nav className="navbar">
