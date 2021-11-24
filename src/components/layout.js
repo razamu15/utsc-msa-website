@@ -25,7 +25,7 @@ const Layout = (props) => {
     }
   `)
 
-  document.documentElement.style.setProperty('--background-img', `url(${data.back.file.url})`)
+  //document.documentElement.style.setProperty('--background-img', `url(${data.back.file.url})`)
 
   function toggleMenu() {
     burger.current.classList.toggle('is-active');
@@ -33,7 +33,7 @@ const Layout = (props) => {
   }
 
   return (
-    <main>
+    <main id="page-root" style={{'----background-img': `url(${data.back.file.url})`}}>
       <section className={`hero is-${props.size}`} id="landing-hero">
         <div className="hero-head">
           <nav className="navbar">
