@@ -2,6 +2,7 @@ import * as React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 // markup
 const Detail = (props) => {
@@ -15,6 +16,8 @@ const Detail = (props) => {
 
 const EventPage = (props) => {
   const event = props.data.contentfulEvent
+  const posterImg = getImage(event.poster)
+
   const back =
     <Link to={`/progs-events/#events`} className="button is-outlined is-inverted" href="">
       <span class="icon">
@@ -57,8 +60,7 @@ const EventPage = (props) => {
             </div>
             <div id="mission-img" class="tile is-6 is-parent" style={{ justifyContent: "center" }}>
               <div class="img-tile tile is-child">
-                <img
-                  src={event.poster.file.url} />
+                <GatsbyImage image={posterImg} alt={'event poster'} />
               </div>
             </div>
 
@@ -81,9 +83,7 @@ export const query = graphql`
       title
       location
       poster {
-        file {
-          url
-        }
+        gatsbyImageData
       }
       description {
         description

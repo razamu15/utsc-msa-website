@@ -7,11 +7,11 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 const AnnouncementPage = (props) => {
   const ann = props.data.contentfulAnnouncement
   const back =
-    <Link to={`/progs-events/#events`} className="button is-outlined is-inverted" href="">
+    <Link to={`/progs-events/#announcements`} className="button is-outlined is-inverted" href="">
       <span class="icon">
         <FontAwesomeIcon icon="arrow-left" />
       </span>
-      <span>All Events</span>
+      <span>All Announcements</span>
     </Link>
 
   return (

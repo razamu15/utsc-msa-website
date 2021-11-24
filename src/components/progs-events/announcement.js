@@ -3,19 +3,8 @@ import { Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Announcments = (props) => {
-  let data = [{ name: 'some random thing', location: 'seomwhere on camputs', day: 'Sun', date: 'Sep 21', time: '11;00 am', slug: 'ting-ting' }]
-
-
   return (
     <table class="table is-fullwidth is-hoverable">
-      <thead>
-        <tr>
-          <th>Time</th>
-          <th style={{ width: '50%' }}>Announcement</th>
-          <th></th>
-        </tr>
-      </thead>
-
       <tbody>
         {props.announcements.nodes.map(ann => {
           return (
