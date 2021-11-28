@@ -9,14 +9,14 @@ const Events = (props) => {
         <div className="tile is-ancestor" style={{ flexWrap: "wrap" }}>
           <div className="tile is-3 is-vertical is-parent">
             <div className="tile is-child format-box">
-              <h1 className="title is-3 hero-heading-border">Latest Events</h1>
+              <h1 className="title is-3 hero-heading-border">{props.data.heading}</h1>
               <p> {props.data.blurb} </p>
-              <button className="button  card-btn is-rounded  is-outlined msa-brown-outline" style={{}}>
+              <Link to={'progs-events/#events'} className="button  card-btn is-rounded  is-outlined msa-brown-outline" style={{}}>
                 <span>All Events</span>
                 <span className="icon is-small">
                   <FontAwesomeIcon icon="arrow-right" />
                 </span>
-              </button>
+              </Link>
             </div>
           </div>
           {props.events.nodes.map(event => {

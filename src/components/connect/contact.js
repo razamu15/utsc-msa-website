@@ -20,7 +20,7 @@ const Contact = (props) => {
           </div>
           <div class="tile is-6 is-vertical is-parent">
             <div class="tile is-child box buttons are-medium contact-socials">
-              <a href="mailto:something@gmail.com" class="button is-light is-primary is-outlined">
+              <a href="mailto:utscmsa1@gmail.com" class="button is-light is-primary is-outlined">
                 <FontAwesomeIcon icon="envelope" />
               </a>
               <a href="https://www.facebook.com/msautsc" target="_blank" className="button is-light is-link is-outlined">

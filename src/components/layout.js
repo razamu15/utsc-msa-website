@@ -110,14 +110,14 @@ const Layout = (props) => {
                           <span>Praying Areas</span>
                         </Link>
                       </span>
-                      <span className="navbar-item">
+                      {/* <span className="navbar-item">
                         <Link to="/resources/#halal-food" className="button">
                           <span className="icon">
                             <FontAwesomeIcon icon="utensils" />
                           </span>
                           <span>Halal Food</span>
                         </Link>
-                      </span>
+                      </span> */}
                     </div>
                   </span>
                   <span className="navbar-item has-dropdown is-hoverable middle">
@@ -245,11 +245,11 @@ const Layout = (props) => {
                 Muslim Student Association
               </h1>
               <h4 className="">
-                <strong>Adderess: </strong> 1265 Military Trail, Scarborough, ON
+                <strong>Address: </strong> 1265 Military Trail, Scarborough, ON
               </h4>
               <br />
               <h4 className="">
-                <strong>Email: </strong> <a href="mailto:">msa@email.com</a>
+                <strong>Email: </strong> <a href="mailto:utscmsa1@gmail.com">utscmsa1@gmail.com</a>
               </h4>
 
             </div>

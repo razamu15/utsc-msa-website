@@ -12,12 +12,12 @@ const Programs = (props) => {
               <h1 className="title is-3 hero-heading-border">{props.data.heading}</h1>
               <p style={{ display: "flex", alignItems: "center" }}>Below are some of
                 {props.data.blurb}
-                <button className="button card-btn is-rounded msa-brown-outline">
+                <Link to={'/progs-events/#programs'} className="button card-btn is-rounded msa-brown-outline">
                   <span>All Programs</span>
                   <span className="icon is-small">
                     <FontAwesomeIcon icon="arrow-right" />
                   </span>
-                </button>
+                </Link>
               </p>
             </div>
           </div>
