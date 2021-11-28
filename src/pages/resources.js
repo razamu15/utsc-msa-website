@@ -35,9 +35,9 @@ const ResourcesPage = (props) => {
         <Areas />
       </ Section>
 
-      <Section id="halal-food" data={data.sections.halal_food}> 
+      {/* <Section id="halal-food" data={data.sections.halal_food}> 
         <Food />
-      </Section>
+      </Section> */}
 
 
     </Layout>
