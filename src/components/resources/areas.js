@@ -35,8 +35,8 @@ const Areas = (props) => {
         height="450"
         style={{ border: "none", overflow: "hidden" }}
         scrolling="no"
-        frameborder="0"
-        allowfullscreen="true"
+        frameBorder="0"
+        allowfullscreen={true}
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         allowFullScreen="true">
       </iframe>
