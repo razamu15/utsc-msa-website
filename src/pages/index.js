@@ -71,6 +71,7 @@ export const query = graphql`
         title
         date(formatString: "ddd, MMM Do @ hh:mma")
         registration
+        registrationLink
         slug
         poster { 
           file {

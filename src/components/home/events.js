@@ -35,7 +35,7 @@ const Events = (props) => {
                       <div class="field is-grouped">
                         {event.registration ?
                           <p class="control">
-                            <a href={event.registration} className="button is-msa-brown card-btn">
+                            <a href={event.registrationLink} className="button is-msa-brown card-btn">
                               <span>Register</span>
                               <span className="icon is-small">
                                 <FontAwesomeIcon icon="user-plus" />

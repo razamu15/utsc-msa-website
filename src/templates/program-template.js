@@ -46,7 +46,7 @@ export const query = graphql`
     contentfulProgram(slug: { eq: $slug}) {
       title
       poster {
-        gatsbyImageData
+        gatsbyImageData(layout: CONSTRAINED, width: 450)
       }
       description {
         description

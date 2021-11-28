@@ -32,7 +32,7 @@ const EventPage = (props) => {
         <div class="hero-body" style={{ padding: "4rem 5rem 4rem 5rem" }}>
           <div class="tile is-ancestor" style={{ flexWrap: "wrap" }}>
 
-            <div class="tile is-12 is-parent" >
+            <div class="tile is-12 is-parent hero-heading-border" style={{marginBottom: '50px'}} >
               <div class="tile is-child event-details" >
                 <Detail label="Date" value={event.day} />
                 <Detail label="Time" value={event.time} />
@@ -40,7 +40,7 @@ const EventPage = (props) => {
                 <Detail label="Registration Required" value={event.registration ? "Yes" : "No"} />
                 {event.registration ?
                   <p class="control">
-                    <a href={event.registration} className="button is-primary card-btn">
+                    <a href={event.registrationLink} className="button is-primary card-btn">
                       <span>Register</span>
                       <span className="icon is-small">
                         <FontAwesomeIcon icon="user-plus" />
@@ -80,10 +80,11 @@ export const query = graphql`
       day: date(formatString: "ddd, MMM Do")
       time: date(formatString: "hh:mma")
       registration
+      registrationLink
       title
       location
       poster {
-        gatsbyImageData
+        gatsbyImageData(layout: CONSTRAINED, width: 450)
       }
       description {
         description
