@@ -230,7 +230,7 @@ body {
   }
 
   .tile p:not(.control){
-    margin: 1rem 0rem;
+    margin: 2.5rem 0rem;
   }
 
   .tile.is-child:not(.img-tile){

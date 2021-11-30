@@ -21,9 +21,9 @@ const Announcements = (props) => {
               return (
                 <div className="tile is-7 is-parent">
                   <div className="tile is-child box format-box">
-                    <h1 className="title is-4">{current.title}</h1>
+                    <h1 className="title is-4" style={{color: '#29648b'}}>{current.title}</h1>
 
-                    <h1 className="title is-5 is-italic pt-3">{current.date}</h1>
+                    <h1 className="title is-5 is-italic pt-3" style={{fontWeight: '300'}}>{current.date}</h1>
                     {documentToReactComponents(JSON.parse(current.body.raw))}
 
                   </div>

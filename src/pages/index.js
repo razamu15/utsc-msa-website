@@ -69,7 +69,7 @@ export const query = graphql`
       nodes {
         contentful_id
         title
-        date(formatString: "ddd, MMM Do @ hh:mma")
+        date(formatString: "dddd, MMM Do | h:mma")
         registration
         registrationLink
         slug

@@ -29,7 +29,7 @@ const Contact = (props) => {
               <a href="https://www.instagram.com/msa_utsc/?hl=en" target="_blank" className="button is-light is-warning is-outlined">
                 <FontAwesomeIcon icon={['fab', 'instagram']} />
               </a>
-              <a href="https://twitter.com/utscmsa?lang=en" target="_blank" className="button is-light is-info is-outlined">
+              <a href="https://twitter.com/msa_utsc" target="_blank" className="button is-light is-info is-outlined">
                 <FontAwesomeIcon icon={['fab', 'twitter']} />
               </a>
               <a href="https://www.linkedin.com/in/msa-utsc-659914218/?originalSubdomain=ca" target="_blank" className="button is-light is-info is-outlined">

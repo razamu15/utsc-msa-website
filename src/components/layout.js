@@ -223,7 +223,7 @@ const Layout = (props) => {
                   <a href="https://www.instagram.com/msa_utsc/?hl=en" target="_blank" className="button is-light is-large">
                     <FontAwesomeIcon icon={['fab', 'instagram']} />
                   </a>
-                  <a href="https://twitter.com/utscmsa?lang=en" target="_blank" className="button is-light is-large">
+                  <a href="https://twitter.com/msa_utsc" target="_blank" className="button is-light is-large">
                     <FontAwesomeIcon icon={['fab', 'twitter']} />
                   </a>
                 </div>

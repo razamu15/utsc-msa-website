@@ -10,15 +10,6 @@ const Programs = (props) => {
           <div className="tile is-12 is-parent" style={{ paddingBottom: "0px" }}>
             <div className="tile is-child format-box" style={{ padding: "0px", alignItems: "center" }}>
               <h1 className="title is-3 hero-heading-border">{props.data.heading}</h1>
-              <p style={{ display: "flex", alignItems: "center" }}>Below are some of
-                {props.data.blurb}
-                <Link to={'/progs-events/#programs'} className="button card-btn is-rounded msa-brown-outline">
-                  <span>All Programs</span>
-                  <span className="icon is-small">
-                    <FontAwesomeIcon icon="arrow-right" />
-                  </span>
-                </Link>
-              </p>
             </div>
           </div>
           {props.programs.nodes.map(prog => {
@@ -47,6 +38,16 @@ const Programs = (props) => {
               </div>
             )
           })}
+          <div className="tile is-12 is-parent" style={{ paddingBottom: "0px" }}>
+            <div className="tile is-child format-box" style={{ padding: "0px", alignItems: "center" }}>
+              <Link to={'/progs-events/#programs'} className="button card-btn is-rounded msa-brown-outline">
+                <span>All Programs</span>
+                <span className="icon is-small">
+                  <FontAwesomeIcon icon="arrow-right" />
+                </span>
+              </Link>
+            </div>
+          </div>
 
         </div>
       </div>

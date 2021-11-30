@@ -6,7 +6,7 @@ const Sponsors = (props) => {
       <div class="hero-body" id="sponsors-body">
         <div>
           <p class="title is-4" style={{ textAlign: "center" }}>
-            Sponsors
+            Partners & <br /> Sponsors
           </p>
           <img src="https://d3n8a8pro7vhmx.cloudfront.net/communitybenefits/profile_images/72f7cdf580a14abb64e8adf4444553d313a6c755.png?1549664612"
             alt="Placeholder image" />

@@ -8,7 +8,7 @@ const Events = (props) => {
       <div className="hero-body">
         <div className="tile is-ancestor" style={{ flexWrap: "wrap" }}>
           <div className="tile is-3 is-vertical is-parent">
-            <div className="tile is-child format-box">
+            <div className="tile is-child format-box" style={{justifyContent: 'center'}}>
               <h1 className="title is-3 hero-heading-border">{props.data.heading}</h1>
               <p> {props.data.blurb} </p>
               <Link to={'progs-events/#events'} className="button  card-btn is-rounded  is-outlined msa-brown-outline" style={{}}>
