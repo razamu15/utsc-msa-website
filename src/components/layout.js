@@ -210,7 +210,7 @@ const Layout = (props) => {
                     {props.heading}
                   </h1>
                   <h2 className="subtitle">
-                    {props.subHeading === "" ? <><br/><br/><br/></>: props.subHeading}
+                    {props.subHeading}
                   </h2>
                 </>
               }
@@ -265,8 +265,8 @@ const Layout = (props) => {
                 Join our newsletter to stay up-to-date with the MSA!
               </h4>
 
-              <Link to={''} className="button is-link is-msa-blue card-btn" data-target="modal-image">Sign up
-                &rarr;</Link>
+              <a target="_blank" href={'https://us5.list-manage.com/subscribe?u=a4b9ed2ce3c9b1ff2ed1cc8aa&id=9102e1b403'} className="button is-link is-msa-blue card-btn" data-target="modal-image">Sign up
+                &rarr;</a>
 
             </div>
           </div>

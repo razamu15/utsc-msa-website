@@ -102,6 +102,12 @@ body {
     background: transparent;
     color: white;
     border: none;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .navbar-item > a > .icon{
+    margin-left: 1px !important;
   }
   
   .navbar-dropdown > .navbar-item > a {
