@@ -1,8 +1,10 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Resources = (props) => {
+  console.log(props.image)
   return (
     <section className="hero is-medium" id="resources" style={{ paddingBottom: '30px' }}>
       <div className="hero-heading">
@@ -12,7 +14,7 @@ const Resources = (props) => {
         <div className="tile is-ancestor">
           <div className="tile is-6 is-parent is-vertical">
             <div className="img-tile tile is-child ">
-              <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+              <GatsbyImage image={getImage(props.image)} alt={"MSA islamic resources"} />
             </div>
           </div>
           <div className="resources-cont" >
