@@ -1,4 +1,5 @@
 import * as React from "react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Sponsors = (props) => {
   return (
@@ -8,14 +9,13 @@ const Sponsors = (props) => {
           <p class="title is-4" style={{ textAlign: "center" }}>
             Partners & <br /> Sponsors
           </p>
-          <img src="https://d3n8a8pro7vhmx.cloudfront.net/communitybenefits/profile_images/72f7cdf580a14abb64e8adf4444553d313a6c755.png?1549664612"
-            alt="Placeholder image" />
-
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/UofT-Sc-logo.svg/1200px-UofT-Sc-logo.svg.png"
-            alt="Placeholder image" />
-
-          <img src="https://d3n8a8pro7vhmx.cloudfront.net/communitybenefits/profile_images/72f7cdf580a14abb64e8adf4444553d313a6c755.png?1549664612"
-            alt="Placeholder image" />
+          {props.data.nodes.map(sponsor => {
+            return (
+              <a target="_blank" href={sponsor.link}>
+                <GatsbyImage image={getImage(sponsor.logo)} alt={sponsor.title} />
+              </a>
+            )
+          })}
         </div>
       </div>
     </section>

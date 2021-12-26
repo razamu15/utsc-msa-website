@@ -20,7 +20,7 @@ const IndexPage = (props) => {
       <About data={data.sections.about} image={props.data.group} />
       <Events data={data.sections.events} events={props.data.latestEvents} />
       <Programs data={data.sections.programs} programs={props.data.showcasePrograms} />
-      <Sponsors />
+      <Sponsors data={props.data.sponsors} />
       <Resources data={data.sections.resources} image={props.data.resources} />
       <Action data={data.sections.action} />
       <Contact />
@@ -103,6 +103,15 @@ export const query = graphql`
         date(formatString: "hh:mma, ddd MMM Do, YYYY")
         body {
           raw
+        }
+      }
+    }
+    sponsors: allContentfulSponsor {
+      nodes {
+        title
+        link
+        logo {
+          gatsbyImageData
         }
       }
     }
