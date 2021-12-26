@@ -41,6 +41,9 @@ const Layout = (props) => {
               <div className="navbar-brand">
                 <Link className="navbar-item" to="/">
                   <img id="logo" src={data.logo.file.url} alt="Logo" style={{width: '70px', height:"70px"}} />
+                  <h1 className="title has-text-white" style={{marginLeft: '20px', fontSize: "1.2rem"}}>
+                    University of Toronto Scarborough <br/> Muslim Student Association
+                  </h1>
                 </Link>
                 <span ref={burger} onClick={toggleMenu} className="navbar-burger burger" data-target="navbarMenu">
                   <span></span>
