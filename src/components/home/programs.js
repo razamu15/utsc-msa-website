@@ -10,6 +10,9 @@ const Programs = (props) => {
           <div className="tile is-12 is-parent" style={{ paddingBottom: "0px" }}>
             <div className="tile is-child format-box" style={{ padding: "0px", alignItems: "center" }}>
               <h1 className="title is-3 hero-heading-border">{props.data.heading}</h1>
+              <p style={{ display: "flex", alignItems: "center" }}>Below are some of
+                {props.data.blurb}
+              </p>
             </div>
           </div>
           {props.programs.nodes.map(prog => {

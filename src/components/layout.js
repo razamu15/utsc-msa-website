@@ -262,11 +262,11 @@ const Layout = (props) => {
                 <strong>Newsletter</strong>
               </h4>
               <h4 className="">
-                some stuff about a newsletter, add a good amount of extra text here to make it lokk whaever
+                Join our newsletter to stay up-to-date with the MSA!
               </h4>
 
-              <span className="button is-link is-msa-blue card-btn" data-target="modal-image">Sign up
-                &rarr;</span>
+              <Link to={''} className="button is-link is-msa-blue card-btn" data-target="modal-image">Sign up
+                &rarr;</Link>
 
             </div>
           </div>
